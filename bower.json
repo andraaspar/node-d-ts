@@ -1,0 +1,28 @@
+{
+  "name": "node-d-ts",
+  "version": "1.0.0",
+  "homepage": "https://github.com/andraaspar/node-d-ts",
+  "authors": [
+    "András Parditka"
+  ],
+  "description": "TypeScript definitions for Node.js.",
+  "keywords": [
+    "TypeScript",
+    "definitions",
+    "Node.js"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "build",
+    "lib",
+    "node_modules",
+    "bower_components",
+    "test",
+    "Gruntfile.js",
+    "package.json"
+  ],
+  "devDependencies": {
+    "illa": "andraaspar/illa#v2.1"
+  }
+}
