@@ -1,3 +1,4 @@
+/// <reference path='../node_modules/typescript/bin/lib.core.es6.d.ts'/>
 /// <reference path='../src/node.d.ts'/>
 
 /// <reference path='../lib/illa/Log.ts'/>

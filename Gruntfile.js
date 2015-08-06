@@ -14,13 +14,9 @@ module.exports = function(grunt) {
 						'bower prune',
 						'bower install'
 					].join('&&')
-				}
-			},
-			typescript: {
-				test: {
-					files: {
-						'build/test.js': 'test/Main.ts'
-					}
+				},
+				compile: {
+					command: '"node_modules/.bin/tsc" --noLib --out "build/test.js" "test/Main.ts"'
 				}
 			}
 		});
@@ -28,9 +24,8 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-clean');
 	grunt.loadNpmTasks('grunt-sas');
 	grunt.loadNpmTasks('grunt-shell');
-	grunt.loadNpmTasks('grunt-typescript');
 
 	grunt.registerTask('update', ['shell:update','sas:update']);
-	grunt.registerTask('compile', ['clean:test','typescript:test']);
+	grunt.registerTask('compile', ['clean:test','shell:compile']);
 	grunt.registerTask('default', ['compile']);
 };
